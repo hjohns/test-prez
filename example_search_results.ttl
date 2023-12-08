@@ -1,0 +1,440 @@
+@prefix croles: <https://data.idnau.org/pid/vocab/cat-roles/> .
+@prefix dar: <https://linked.data.gov.au/def/data-access-rights/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix democat: <https://data.idnau.org/pid/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix idnroles: <https://data.idnau.org/pid/vocab/idn-role-codes/> .
+@prefix isoroles: <http://def.isotc211.org/iso19115/-1/2018/CitationAndResponsiblePartyInformation/code/CI_RoleCode/> .
+@prefix isucat: <https://data.idnau.org/pid/isucat> .
+@prefix prez: <https://prez.dev/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg: <http://purl.org/linked-data/registry#> .
+@prefix scores: <https://linked.data.gov.au/def/scores/> .
+@prefix sdo: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix status: <http://def.isotc211.org/iso19135/-1/2015/CoreModel/code/RE_ItemStatus/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dcterms:accessRights rdfs:label "Access Rights"@en ;
+    dcterms:description "Access Rights may include information regarding access or restrictions based on privacy, security, or other policies."@en .
+
+dcterms:created rdfs:label "Date Created"@en ;
+    dcterms:description "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en .
+
+dcterms:creator rdfs:label "Creator"@en ;
+    dcterms:description "Recommended practice is to identify the creator with a URI.  If this is not possible or feasible, a literal value that identifies the creator may be provided."@en .
+
+dcterms:format rdfs:label "Format"@en ;
+    dcterms:description "Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)].  Examples of dimensions include size and duration."@en .
+
+dcterms:identifier rdfs:label "Identifier"@en ;
+    dcterms:description "Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN).  Persistent identifiers should be provided as HTTP URIs."@en .
+
+dcterms:isPartOf rdfs:label "Is Part Of"@en ;
+    dcterms:description "This property is intended to be used with non-literal values. This property is an inverse property of Has Part."@en .
+
+dcterms:issued rdfs:label "Date Issued"@en ;
+    dcterms:description "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en .
+
+dcterms:license rdfs:label "License"@en ;
+    dcterms:description "Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided."@en .
+
+dcterms:provenance rdfs:label "Provenance"@en ;
+    dcterms:description "The statement may include a description of any changes successive custodians made to the resource."@en .
+
+dcterms:publisher rdfs:label "Publisher"@en .
+
+dcterms:rights rdfs:label "Rights"@en ;
+    dcterms:description "Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.  Recommended practice is to refer to a rights statement with a URI.  If this is not possible or feasible, a literal value (name, label, or short text) may be provided."@en .
+
+dcterms:spatial rdfs:label "Spatial Coverage"@en .
+
+dcterms:temporal rdfs:label "Temporal Coverage"@en .
+
+dcterms:type rdfs:label "Type"@en ;
+    dcterms:description "Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [[DCMI-TYPE](http://dublincore.org/documents/dcmi-type-vocabulary/)]. To describe the file format, physical medium, or dimensions of the resource, use the property Format."@en .
+
+geo:asWKT skos:definition "The WKT serialization of a Geometry"@en ;
+    skos:prefLabel "as WKT"@en .
+
+geo:hasGeometry skos:definition "A spatial representation for a given Feature."@en ;
+    skos:prefLabel "has geometry"@en .
+
+rdf:type rdfs:label "type" .
+
+rdfs:comment rdfs:label "comment" .
+
+skos:definition rdfs:label "definition"@en ;
+    skos:definition "A statement or formal explanation of the meaning of a concept."@en .
+
+skos:note rdfs:label "note"@en ;
+    skos:definition "A general note, for any purpose."@en .
+
+skos:prefLabel rdfs:label "preferred label"@en ;
+    skos:definition "The preferred lexical label for a resource, in a given language."@en .
+
+dcat:accessURL rdfs:label "access address"@en .
+
+dcat:hadRole rdfs:label "hadRole"@en .
+
+dcat:theme rdfs:label "theme"@en .
+
+prov:agent rdfs:label "agent" .
+
+prov:entity rdfs:label "entity" .
+
+prov:qualifiedAttribution rdfs:label "qualified attribution" .
+
+democat:atns dcterms:identifier "pd:atns"^^prez:identifier ;
+    dcterms:provenance "This dataset is a direct extraction of the spatial elements of the ATNS with no additional information added other than spatial relations to other published Linked Data objects, such as States & Territories in the ASGS" ;
+    sdo:description "Spatial features of the Agreements, Treaties and Negotiated Settlements (ATNS) database" ;
+    sdo:name "ATNS Spatial Features" .
+
+<https://data.idnau.org/pid/atns/entity-areas> dcterms:identifier "atns:entity-areas"^^prez:identifier ;
+    sdo:description "Bounding Box areas for all of the Entities - Agreements, Treaties etc., in the ATNS database"@en ;
+    sdo:name "ATNS Entity Areas"@en .
+
+democat:democat rdfs:label "IDN Demonstration Catalogue" ;
+    dcterms:description """The Indigenous Data Network's demonstration catalogue of datasets. This catalogue contains records of datasets in Australia, most of which have some relation to indigenous Australia.
+
+The purpose of this catalogue is not to act as a master catalogue of indigenous data in Australia to demonstrate improved metadata models and rating systems for data and metadata in order to improve indigenous data governance.
+
+The content of this catalogue conforms to the Indigenous Data Network's Catalogue Profile which is a profile of the DCAT, SKOS and PROV data models."""@en ;
+    dcterms:identifier "pd:democat"^^prez:identifier ;
+    dcterms:title "IDN Demonstration Catalogue" .
+
+isucat: dcterms:description "The Indigenous Studies Unit at the University of Melbourne's catalogue of indigenous data"@en ;
+    dcterms:identifier "pd:isucat"^^prez:identifier ;
+    dcterms:title "Indigenous Studies Unit Catalogue" .
+
+<https://data.idnau.org/pid/vocab/cat-roles> rdfs:label "Catalogue Roles"@en ;
+    dcterms:identifier "vcb:cat-roles"^^prez:identifier ;
+    dcterms:provenance "This vocabulary was established to assist the IDN with differentiating resources' various catalogues. There seems to be no precedent for this form of catalogue classification elsewhere."@en ;
+    skos:definition "The Indigenous Data Network's classifications of the roles that Catalogs may play with respect to Resources catalogued within them"@en ;
+    skos:prefLabel "Catalogue Roles"@en .
+
+<https://data.idnau.org/pid/vocab/idn-role-codes> rdfs:label "IDN Role Codes"@en ;
+    dcterms:identifier "vcb:idn-role-codes"^^prez:identifier ;
+    dcterms:provenance "Derived from the ISO 19115's CI Role Code vocabulary"@en ;
+    skos:definition "The Indigenous Data Network's vocabulary of the types of roles Agents - People and Organisations - play in relation to data."@en ;
+    skos:prefLabel "IDN Role Codes"@en .
+
+idnroles:iso-roles rdfs:label "ISO CI Role Code codes"@en ;
+    dcterms:identifier "dn-rl-cds:iso-roles"^^prez:identifier ;
+    dcterms:provenance "The list of Concepts from the original ISO CI Role Code vocabulary"@en ;
+    skos:definition "Codes from the original ISO CI Role Code codelist"@en ;
+    skos:prefLabel "ISO CI Role Code codes"@en .
+
+<https://data.idnau.org/pid/vocab/indigeneity> rdfs:label "Data Indigeneity"@en ;
+    dcterms:identifier "vcb:indigeneity"^^prez:identifier ;
+    skos:definition "The ways in which data may have a connection to indigenous people"@en ;
+    skos:prefLabel "Data Indigeneity"@en .
+
+<https://linked.data.gov.au/def/data-access-rights> rdfs:label "Data Access Rights"@en ;
+    dcterms:identifier "def:data-access-rights"^^prez:identifier ;
+    skos:definition "Data access rights control how users and systems access a data resource."@en ;
+    skos:prefLabel "Data Access Rights"@en .
+
+dar:closed-access-rights rdfs:label "Closed data access rights",
+        "Closed data access rights"@en ;
+    dcterms:identifier "dt-ccss-rghts:closed-access-rights"^^prez:identifier ;
+    skos:definition "Selective restriction of access to data that is OFFICIAL (low or negligible confidentiality impact), SENSITIVE (moderate confidentiality impact) or PROTECTED (high confidentiality impact)."@en ;
+    skos:prefLabel "Closed data access rights"@en .
+
+sdo:description rdfs:label "description" .
+
+<urn:hash:02e05aaa7114d5a816a6a063fae472d3964977c35f6d7d10e39bc0e91a3f1322> a prez:SearchResult ;
+    prez:searchResultMatch "PathologyTest" ;
+    prez:searchResultPredicate rdfs:label ;
+    prez:searchResultURI sdo:PathologyTest ;
+    prez:searchResultWeight 10 .
+
+<urn:hash:15b326fedb04aa0ccf8cd5ccb6e2e7710d4431bdb956fd0c6ac65a708d1e1a75> a prez:SearchResult ;
+    prez:searchResultMatch "MedicalTestPanel" ;
+    prez:searchResultPredicate rdfs:label ;
+    prez:searchResultURI sdo:MedicalTestPanel ;
+    prez:searchResultWeight 10 .
+
+<urn:hash:25a1ef356a97c10d7a77a5567c37e49a47f1a064faf5177ecabe747c91d72c2f> a prez:SearchResult ;
+    prez:searchResultMatch "test" ;
+    prez:searchResultPredicate sdo:name ;
+    prez:searchResultURI <https://data.idnau.org/pid/atns/feature/0696> ;
+    prez:searchResultWeight 130 .
+
+<urn:hash:39662ad624664481ea3feb15b1ccd03c77a822e2a4a75676bef9d1084a2590a8> a prez:SearchResult ;
+    prez:searchResultMatch "Test dataset for the ISU Catalogue" ;
+    prez:searchResultPredicate dcterms:title ;
+    prez:searchResultURI democat:ISU-TEST ;
+    prez:searchResultWeight 30 .
+
+<urn:hash:5930a8d0c51e514dfe971cced9b1b6e588c6e9cbf5e807f1ac6d507936722ba6> a prez:SearchResult ;
+    prez:searchResultMatch """Data workbooks presenting the latest Social Health Atlases of Australia are available for the whole of Australia by Population Health Area, Local Government Area, and Primary Health Network, and by Indigenous Area for the Aboriginal & Torres Strait Islander population. Data are also available by Quintile of Socioeconomic Disadvantage of Area (current period and time series), and Remoteness Area (current period and time series), for both the whole population, and the Aboriginal & Torres Strait Islander population (current period only).
+
+These workbooks are derived from ABS Census data releases.""" ;
+    prez:searchResultPredicate dcterms:description ;
+    prez:searchResultURI democat:SHAA ;
+    prez:searchResultWeight 10 .
+
+<urn:hash:5c825016d4bf64b2ab5a55ba91bb19aa783ea46083e99de789467e0d502befea> a prez:SearchResult ;
+    prez:searchResultMatch "ImagingTest" ;
+    prez:searchResultPredicate rdfs:label ;
+    prez:searchResultURI sdo:ImagingTest ;
+    prez:searchResultWeight 10 .
+
+<urn:hash:6f707f35aa9dce3aa84ed051449f51ccf22c18747d44bdfb7198a2aac3ee7d82> a prez:SearchResult ;
+    prez:searchResultMatch "CovidTestingFacility" ;
+    prez:searchResultPredicate rdfs:label ;
+    prez:searchResultURI sdo:CovidTestingFacility ;
+    prez:searchResultWeight 10 .
+
+<urn:hash:a827938ecd651d832abbfacb812a38794b536d0e542220073b1ade07bde9a821> a prez:SearchResult ;
+    prez:searchResultMatch "MedicalTest" ;
+    prez:searchResultPredicate rdfs:label ;
+    prez:searchResultURI sdo:MedicalTest ;
+    prez:searchResultWeight 10 .
+
+<urn:hash:b98e251677ac03e169006bbd74b65fd3dcc31d686c3a121943f26a3ce9963656> a prez:SearchResult ;
+    prez:searchResultMatch "This is a test catalogue entry record for the ISU catalogue." ;
+    prez:searchResultPredicate dcterms:description ;
+    prez:searchResultURI democat:ISU-TEST ;
+    prez:searchResultWeight 10 .
+
+<urn:hash:bcdf6a0189ab35686da5e7b503d468d22f6ddc9983a1b7fe5ed4916399b716fd> a prez:SearchResult ;
+    prez:searchResultMatch "BloodTest" ;
+    prez:searchResultPredicate rdfs:label ;
+    prez:searchResultURI sdo:BloodTest ;
+    prez:searchResultWeight 10 .
+
+isoroles:rightsHolder rdfs:label "rights holder"@en ;
+    dcterms:provenance "Presented in the original standard's codelist"@en ;
+    reg:status status:stable ;
+    skos:definition "party owning or managing rights over the resource" ;
+    skos:prefLabel "rights holder"@en ;
+    prez:link "/v/collection/dn-rl-cds:iso-roles/c_rlcd:rightsHolder",
+        "/v/vocab/vcb:idn-role-codes/c_rlcd:rightsHolder" .
+
+dcterms:title rdfs:label "Title"@en .
+
+geo:Feature skos:definition "A discrete spatial phenomenon in a universe of discourse."@en ;
+    skos:prefLabel "Feature"@en .
+
+geo:Geometry skos:definition "A coherent set of direct positions in space. The positions are held within a Spatial Reference System (SRS)."@en ;
+    skos:prefLabel "Geometry"@en .
+
+<https://data.idnau.org/pid/atns/feature/0696> a geo:Feature ;
+    geo:hasGeometry [ a geo:Geometry ;
+            geo:asWKT "POLYGON((119 -22, 128 -22, 128 -13, 119 -13, 119 -22))"^^geo:wktLiteral ] ;
+    prez:link "/s/datasets/pd:atns/collections/atns:entity-areas/items/ftr:0696" ;
+    sdo:name "test" .
+
+croles:home rdfs:label "Home"@en ;
+    dcterms:provenance "Created for the IDN project, 2023"@en ;
+    skos:definition "A catalogue for a resource that is considered to house its point-of-true information" ;
+    skos:prefLabel "Home"@en ;
+    prez:link "/v/vocab/vcb:cat-roles/ct-rls:home" .
+
+<https://linked.data.gov.au/dataset/asgsed3/AUS/AUS> rdfs:label "Australia" .
+
+dar:metadata-only rdfs:label "Metadata only access",
+        "Metadata only access"@en ;
+    skos:definition "Metadata only access refers to a resource in which access is limited to metadata only. Access to the resource requires granting of access rights."@en ;
+    skos:prefLabel "Metadata only access"@en ;
+    prez:link "/v/collection/dt-ccss-rghts:closed-access-rights/dt-ccss-rghts:metadata-only",
+        "/v/vocab/def:data-access-rights/dt-ccss-rghts:metadata-only" .
+
+<https://orcid.org/0000-0002-8742-7730> sdo:name "Nicholas J. Car"@en .
+
+sdo:BloodTest rdfs:label "BloodTest" ;
+    rdfs:comment "A medical test performed on a sample of a patient's blood." .
+
+sdo:CovidTestingFacility rdfs:label "CovidTestingFacility" ;
+    rdfs:comment """A CovidTestingFacility is a [[MedicalClinic]] where testing for the COVID-19 Coronavirus
+      disease is available. If the facility is being made available from an established [[Pharmacy]], [[Hotel]], or other
+      non-medical organization, multiple types can be listed. This makes it easier to re-use existing schema.org information
+      about that place e.g. contact info, address, opening hours. Note that in an emergency, such information may not always be reliable.
+      """ .
+
+sdo:ImagingTest rdfs:label "ImagingTest" ;
+    rdfs:comment "Any medical imaging modality typically used for diagnostic purposes." .
+
+sdo:MedicalTest rdfs:label "MedicalTest" ;
+    rdfs:comment "Any medical test, typically performed for diagnostic purposes." .
+
+sdo:MedicalTestPanel rdfs:label "MedicalTestPanel" ;
+    rdfs:comment "Any collection of tests commonly ordered together." .
+
+sdo:PathologyTest rdfs:label "PathologyTest" ;
+    rdfs:comment "A medical test performed by a laboratory that typically involves examination of a tissue sample by a pathologist." .
+
+sdo:name rdfs:label "name" .
+
+isoroles:custodian rdfs:label "custodian"@en ;
+    dcterms:provenance "Presented in the original standard's codelist"@en ;
+    reg:status status:stable ;
+    skos:definition "party that accepts accountability and responsibility for the resource and ensures appropriate care and maintenance of the resource" ;
+    skos:prefLabel "custodian"@en ;
+    prez:link "/v/collection/dn-rl-cds:iso-roles/c_rlcd:custodian",
+        "/v/vocab/vcb:idn-role-codes/c_rlcd:custodian" .
+
+isoroles:originator rdfs:label "originator"@en ;
+    dcterms:provenance "Presented in the original standard's codelist"@en ;
+    reg:status status:stable ;
+    skos:definition "party who created the resource" ;
+    skos:prefLabel "originator"@en ;
+    prez:link "/v/collection/dn-rl-cds:iso-roles/c_rlcd:originator",
+        "/v/vocab/vcb:idn-role-codes/c_rlcd:originator" .
+
+dcterms:description rdfs:label "Description"@en ;
+    dcterms:description "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."@en .
+
+dcat:Resource rdfs:label "Catalogued resource"@en .
+
+<https://data.idnau.org/pid/org/isu> rdfs:label "Indigenous Studies Unit" .
+
+<https://data.idnau.org/pid/vocab/indigeneity/about-indigenous-people> rdfs:label "About Indigenous People"@en ;
+    dcterms:provenance "Created for the IDN project, 2022"@en ;
+    skos:definition "Data that is about indigenous people" ;
+    skos:prefLabel "About Indigenous People"@en ;
+    prez:link "/v/vocab/vcb:indigeneity/ndgnty:about-indigenous-people" .
+
+democat:SHAA a dcat:Resource ;
+    dcterms:creator <https://data.idnau.org/pid/adb/org/phidu> ;
+    dcterms:description """Data workbooks presenting the latest Social Health Atlases of Australia are available for the whole of Australia by Population Health Area, Local Government Area, and Primary Health Network, and by Indigenous Area for the Aboriginal & Torres Strait Islander population. Data are also available by Quintile of Socioeconomic Disadvantage of Area (current period and time series), and Remoteness Area (current period and time series), for both the whole population, and the Aboriginal & Torres Strait Islander population (current period only).
+
+These workbooks are derived from ABS Census data releases.""" ;
+    dcterms:format "xslx" ;
+    dcterms:identifier "SHAA"^^xsd:token ;
+    dcterms:isPartOf [ dcat:hadRole croles:home ;
+            prov:entity <https://phidu.torrens.edu.au/social-health-atlases/data> ] ;
+    dcterms:issued "2022-06"^^xsd:gYearMonth ;
+    dcterms:license "CC-BY-NC-SA" ;
+    dcterms:publisher <https://data.idnau.org/pid/adb/org/99-154-937-005> ;
+    dcterms:rights "PHIDU, Torrens University Australia" ;
+    dcterms:spatial <https://linked.data.gov.au/dataset/asgsed3/AUS/AUS> ;
+    dcterms:temporal "2021 Census " ;
+    dcterms:title "Social Health Atlases of Australia" ;
+    dcterms:type "collection" ;
+    skos:note """This catalogue contains specific Aboriginal and Torres Strait Islander Population datasets
+
+ABS SA2 Regions of Australia""" ;
+    dcat:accessURL "https://phidu.torrens.edu.au/social-health-atlases/data#aboriginal-torres-strait-islander-social-health-atlas-of-australia-indigenous-areas"^^xsd:anyURI ;
+    dcat:theme <https://data.idnau.org/pid/vocab/indigeneity/about-indigenous-people> ;
+    prov:qualifiedAttribution [ dcat:hadRole isoroles:rightsHolder ;
+            prov:agent <https://data.idnau.org/pid/adb/org/phidu> ],
+        [ dcat:hadRole isoroles:custodian ;
+            prov:agent <https://data.idnau.org/pid/adb/org/99-154-937-005> ],
+        [ dcat:hadRole isoroles:originator ;
+            prov:agent <https://data.idnau.org/pid/adb/org/phidu> ] ;
+    scores:hasScore [ a qb:ObservationGroup,
+                scores:FairScoreNormalised ;
+            qb:observation [ a qb:Observation ;
+                    scores:fairAScoreNormalised "0.00" ],
+                [ a qb:Observation ;
+                    scores:fairRScoreNormalised "0.71" ],
+                [ a qb:Observation ;
+                    scores:fairFScoreNormalised "0.59" ],
+                [ a qb:Observation ;
+                    scores:fairIScoreNormalised "0.25" ] ;
+            scores:refResource democat:SHAA ],
+        [ a qb:ObservationGroup,
+                scores:CareScore ;
+            qb:observation [ a qb:Observation ;
+                    scores:careAScore 3 ],
+                [ a qb:Observation ;
+                    scores:careEScore 0 ],
+                [ a qb:Observation ;
+                    scores:careRScore 0 ],
+                [ a qb:Observation ;
+                    scores:careCScore 3 ] ;
+            scores:refResource democat:SHAA ],
+        [ a qb:ObservationGroup,
+                scores:FairScore ;
+            qb:observation [ a qb:Observation ;
+                    scores:fairFScore 10 ],
+                [ a qb:Observation ;
+                    scores:fairAScore 0 ],
+                [ a qb:Observation ;
+                    scores:fairRScore 5 ],
+                [ a qb:Observation ;
+                    scores:fairIScore 2 ] ;
+            scores:refResource democat:SHAA ],
+        [ a qb:ObservationGroup,
+                scores:CareScoreNormalised ;
+            qb:observation [ a qb:Observation ;
+                    scores:careRScoreNormalised "0.00" ],
+                [ a qb:Observation ;
+                    scores:careAScoreNormalised "0.33" ],
+                [ a qb:Observation ;
+                    scores:careCScoreNormalised "0.38" ],
+                [ a qb:Observation ;
+                    scores:careEScoreNormalised "0.00" ] ;
+            scores:refResource democat:SHAA ] ;
+    prez:link "/c/catalogs/pd:democat/pd:SHAA" .
+
+rdfs:label rdfs:label "label" .
+
+democat:ISU-TEST a dcat:Resource ;
+    dcterms:accessRights dar:metadata-only ;
+    dcterms:created "2023-05-22"^^xsd:date ;
+    dcterms:description "This is a test catalogue entry record for the ISU catalogue." ;
+    dcterms:publisher <https://data.idnau.org/pid/org/isu> ;
+    dcterms:title "Test dataset for the ISU Catalogue" ;
+    dcat:theme <https://data.idnau.org/pid/vocab/indigeneity/about-indigenous-people> ;
+    prov:qualifiedAttribution [ dcat:hadRole isoroles:originator ;
+            prov:agent <https://orcid.org/0000-0002-8742-7730> ],
+        [ dcat:hadRole isoroles:custodian ;
+            prov:agent <https://data.idnau.org/pid/org/isu> ] ;
+    scores:hasScore [ a qb:ObservationGroup,
+                scores:FairScore ;
+            qb:observation [ a qb:Observation ;
+                    scores:fairIScore 6 ],
+                [ a qb:Observation ;
+                    scores:fairAScore 0 ],
+                [ a qb:Observation ;
+                    scores:fairFScore 10 ],
+                [ a qb:Observation ;
+                    scores:fairRScore 3 ] ;
+            scores:refResource democat:ISU-TEST ],
+        [ a qb:ObservationGroup,
+                scores:careScore ;
+            qb:observation [ a qb:Observation ;
+                    scores:careAScore 3 ],
+                [ a qb:Observation ;
+                    scores:careRScore 0 ],
+                [ a qb:Observation ;
+                    scores:careEScore 0 ],
+                [ a qb:Observation ;
+                    scores:careCScore 4 ] ;
+            scores:refResource democat:ISU-TEST ],
+        [ a qb:ObservationGroup,
+                scores:careScoreNormalised ;
+            qb:observation [ a qb:Observation ;
+                    scores:careCScoreNormalised "0.50" ],
+                [ a qb:Observation ;
+                    scores:careAScoreNormalised "0.33" ],
+                [ a qb:Observation ;
+                    scores:careEScoreNormalised "0.00" ],
+                [ a qb:Observation ;
+                    scores:careRScoreNormalised "0.00" ] ;
+            scores:refResource democat:ISU-TEST ],
+        [ a qb:ObservationGroup,
+                scores:FairScoreNormalised ;
+            qb:observation [ a qb:Observation ;
+                    scores:fairFScoreNormalised "0.59" ],
+                [ a qb:Observation ;
+                    scores:fairAScoreNormalised "0.00" ],
+                [ a qb:Observation ;
+                    scores:fairIScoreNormalised "0.75" ],
+                [ a qb:Observation ;
+                    scores:fairRScoreNormalised "0.43" ] ;
+            scores:refResource democat:ISU-TEST ] ;
+    prez:link "/c/catalogs/pd:isucat/pd:ISU-TEST" .
+
+
+prez:SearchResult
+    prez:count 10
+.

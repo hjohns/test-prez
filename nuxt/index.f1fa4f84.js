@@ -1,0 +1,1 @@
+import{t as e}from"./str.08505d9c.js";import{j as t,o,c as a,t as n,g as r}from"./entry.bcf69c92.js";const _=t({__name:"index",setup(s){return(p,c)=>(o(),a("h1",null,n(r(e)("Home Page")),1))}});export{_ as default};

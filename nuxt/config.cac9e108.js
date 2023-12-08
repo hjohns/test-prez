@@ -1,0 +1,1 @@
+const t="https://prez-v4.sgraljii8d3km.ap-southeast-2.cs.amazonlightsail.com",e="catalogs",o=(s,a)=>a.app.baseURL?s.replace(a.app.baseURL,""):s,c={getUrl:o,API_BASE_URL:t,CATALOG_LIST_URL:e};export{c};
