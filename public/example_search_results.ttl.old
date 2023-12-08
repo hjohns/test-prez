@@ -1,0 +1,84 @@
+PREFIX ex: <http://example.org/>
+PREFIX ns1: <https://prez.dev/>
+PREFIX prez: <https://prez.dev/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+ex:Item5
+    a ns1:SearchResult ;
+    rdfs:label "Random text" ;
+.
+
+ex:Item6
+    a ns1:SearchResult ;
+    rdfs:label "Another test case" ;
+.
+
+<urn:hash:59a3f70bad805d42fa932adbf0a130464f0aad7029fc97f6ce02902386caf995>
+    a ns1:SearchResult ;
+    ns1:searchResultMatch "Testing the first item" ;
+    ns1:searchResultPredicate rdfs:label ;
+    ns1:searchResultURI ex:Item1 ;
+    ns1:searchResultWeight 30 ;
+.
+
+<urn:hash:7aeb16157d27353db2671076c3153ed5847c0b74b00f91d7e431fedcdcc60c1b>
+    a ns1:SearchResult ;
+    ns1:searchResultMatch "A second item for testing" ;
+    ns1:searchResultPredicate rdfs:label ;
+    ns1:searchResultURI ex:Item2 ;
+    ns1:searchResultWeight 10 ;
+.
+
+<urn:hash:8ace5e8e57c159963e70a78773c4db5516332e706ee510a0db1f7c923b94eedf>
+    a ns1:SearchResult ;
+    ns1:searchResultMatch "testing in lowercase" ;
+    ns1:searchResultPredicate rdfs:label ;
+    ns1:searchResultURI ex:Item3 ;
+    ns1:searchResultWeight 30 ;
+.
+
+<urn:hash:8d959672e10fa42215dc67b1557a83caff45c80b62aa38ef948f9c9461bbd846>
+    a ns1:SearchResult ;
+    ns1:searchResultMatch "An item with Testing occurring somewhere" ;
+    ns1:searchResultPredicate rdfs:label ;
+    ns1:searchResultURI ex:Item4 ;
+    ns1:searchResultWeight 10 ;
+.
+
+<urn:hash:c20eeafb170786a33bc265e60d45cb1d974b2566c276cf522cbf9ecce8ace989>
+    a ns1:SearchResult ;
+    ns1:searchResultMatch "A case with the word testing in the middle" ;
+    ns1:searchResultPredicate rdfs:label ;
+    ns1:searchResultURI ex:Item7 ;
+    ns1:searchResultWeight 10 ;
+.
+
+ex:Item1
+    a ns1:SearchResult ;
+    rdfs:label "Testing the first item" ;
+.
+
+ex:Item2
+    a ns1:SearchResult ;
+    rdfs:label "A second item for testing" ;
+.
+
+ex:Item3
+    a ns1:SearchResult ;
+    rdfs:label "testing in lowercase" ;
+.
+
+ex:Item4
+    a ns1:SearchResult ;
+    rdfs:label "An item with Testing occurring somewhere" ;
+.
+
+ex:Item7
+    a ns1:SearchResult ;
+    rdfs:label "A case with the word testing in the middle" ;
+.
+
+ns1:SearchResult
+    prez:count 7
+.

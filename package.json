@@ -1,0 +1,36 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "deploy": "git clean -df; push-dir --dir=dist --branch=gh-pages --cleanup"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@types/mustache": "^4.2.5"
+  },
+  "overrides": {
+    "vue": "latest"
+  },
+  "dependencies": {
+    "@mdi/font": "^7.3.67",
+    "@pinia/nuxt": "^0.4.11",
+    "@types/n3": "^1.16.0",
+    "@types/vue": "^2.0.0",
+    "axios": "^1.5.0",
+    "devalue": "^4.3.2",
+    "mustache": "^4.2.0",
+    "n3": "^1.17.1",
+    "nuxt": "^3.7.1",
+    "pinia": "^2.1.6",
+    "push-dir": "^0.4.1",
+    "sass": "^1.69.4",
+    "vite-plugin-vuetify": "^1.0.2",
+    "vue-types": "^5.1.1",
+    "vuetify": "^3.4.0-alpha.1"
+  }
+}
